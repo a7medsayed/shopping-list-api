@@ -38,9 +38,28 @@ const update = (productId, updatedProduct) => {
     return products;
   };
 
+  const getById = (id) => products.find(p => p.id === id);
+
+  const decreaseQuantity = (id) => {
+    const product = getById(id);
+    if (product) {
+      product.quantity -= 1;
+    }
+  };
+  
+  const increaseQuantity = (id) => {
+    const product = getById(id);
+    if (product) {
+      product.quantity += 1;
+    }
+  };
+
 module.exports = {
   getAll,
+  getById,
   add,
   update,
-  deleteProduct
+  deleteProduct,
+  decreaseQuantity,
+  increaseQuantity
 };
