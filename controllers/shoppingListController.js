@@ -1,5 +1,7 @@
 const Product = require('../models/productsModel');
 const ShoppingList = require('../models/shoppingListModel');
+const { validateProductId } = require('../utils/validation');
+
 
 // @desc Get shopping list with total
 exports.getList = (req, res) => {
@@ -25,8 +27,12 @@ exports.getList = (req, res) => {
 // @desc Add a product to shopping list
 exports.addToList = (req, res) => {
     const { productId } = req.params;
+
+    const idError = validateProductId(productId);
+    if (idError) return res.status(400).json({ message: idError });
+
+
     const product = Product.getById(productId);
-  
     if (!product) {
       return res.status(404).json({ message: 'Product not found.' });
     }
@@ -34,10 +40,7 @@ exports.addToList = (req, res) => {
     if (product.quantity <= 0) {
       return res.status(400).json({ message: 'Product is out of stock.' });
     }
-  
-    if (ShoppingList.exists(productId)) {
-      return res.status(400).json({ message: 'Product already in shopping list.' });
-    }
+
   
     Product.decreaseQuantity(productId);
     ShoppingList.addItem(productId);
