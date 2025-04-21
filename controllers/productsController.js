@@ -17,6 +17,8 @@ exports.getAllProducts = (req, res) => {
 // @access Public
 exports.addNewProduct = (req, res) => {
     try {
+        const error = validateProductInput(req.body);
+        if (error) return res.status(400).json({ message: error });
       const products = Product.add(req.body);
       res.status(200).json(products);
     } catch (error) {
