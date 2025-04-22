@@ -10,5 +10,7 @@ router.post('/:productId', shoppingListController.addToList);
 
 // Remove product from shopping list
 router.delete('/:productId', shoppingListController.removeFromList);
+// Apply promo code
+router.post('/apply-promo/:name', shoppingListController.applyPromo);
 
 module.exports = router;
