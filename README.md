@@ -28,7 +28,7 @@ A simple RESTful API for managing products, shopping lists, and promo codes usin
 ## 📬 Postman Collection
 
 Test the API using this public Postman collection:  
-🔗 [Click here to open in Postman]([https://www.postman.com/teams/new-team-workspace/workspace/new-team-workspace/collection/30527112-b5f571e9-76ef-425d-b730-d644eea3a2ac?action=share&creator=30527112](https://lively-flare-406131.postman.co/workspace/New-Team-Workspace~24785804-3482-4974-980d-63f042490384/collection/30527112-b5f571e9-76ef-425d-b730-d644eea3a2ac?action=share&creator=30527112&active-environment=30527112-68bbf4e4-05c9-462b-ad08-c3791fb4f4cb))
+🔗 [Click here to open in Postman](https://www.postman.com/teams/new-team-workspace/workspace/new-team-workspace/collection/30527112-b5f571e9-76ef-425d-b730-d644eea3a2ac?action=share&creator=30527112](https://lively-flare-406131.postman.co/workspace/New-Team-Workspace~24785804-3482-4974-980d-63f042490384/collection/30527112-b5f571e9-76ef-425d-b730-d644eea3a2ac?action=share&creator=30527112&active-environment=30527112-68bbf4e4-05c9-462b-ad08-c3791fb4f4cb)
 
 > ⚠️ **Tip:** Update the collection's base URL to:  
 > `https://shopping-list-api-d20c.onrender.com`
