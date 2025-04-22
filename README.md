@@ -52,8 +52,8 @@ Test the API using this public Postman collection:
 
 | Method | Route                                | Description                          |
 |--------|--------------------------------------|--------------------------------------|
-| POST   | `/shopping-list/add/:productId`      | Add a product to the shopping list   |
-| DELETE | `/shopping-list/remove/:productId`   | Remove a product from the list       |
+| POST   | `/shopping-list/:productId`      | Add a product to the shopping list   |
+| DELETE | `/shopping-list/:productId`   | Remove a product from the list       |
 | GET    | `/shopping-list`                     | Get all items in your shopping list  |
 | POST   | `/shopping-list/apply-promo/:name`   | Apply a promo code to the total      |
 
