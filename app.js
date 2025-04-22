@@ -19,7 +19,11 @@ app.use('/shopping-list', shoppingListRoutes);
 app.use('/promo-codes', promoCodesRoutes);
 
 
+if(require.main === module){
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+}
+
+module.exports = app;
